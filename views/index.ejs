@@ -20,9 +20,9 @@
         <% files.forEach((file)=>{%>
             <div class="list">
                 <h3><%= file %></h3>
-                <a href="/show/:task">show</a>
-                <a href="/edit/:task">edit</a>
-                <a href="/delete/:task">delete</i></a>
+                <a href="/show/<%= file %>">show</a>
+                <a href="/edit/<%= file %>">edit</a>
+                <a href="/delete/<%= file %>">delete</i></a>
              </div>
         <% })  %>
        

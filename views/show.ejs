@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <nav>
+        <h1>Taskbook</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/create">Create Task</a></li>
+        </ul>
+    </nav>
+    <h1>Task of <span><%= filename %></span> date</h1>
+
+        <p><%= data %></p>
+        <br>
+        <a href="/edit/<%= filename %>">edit this task</a>
 </body>
 </html>

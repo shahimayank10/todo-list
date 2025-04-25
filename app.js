@@ -39,8 +39,36 @@ app.post("/create", (req, res) => {
   
 )});
 
+app.get("/show/:task", (req, res) => {
+  const filename = req.params.task;
+  fs.readFile(`./files/${filename}`, "utf-8", (err, data) => {
+    if (err) return res.status(500).send("Error reading file");
+    res.render("show", { filename, data });
+  });
+});
+
 app.get("/edit/:task", (req, res) => {
-  res.render("create");
+    const filename = req.params.task;
+    fs.readFile(`./files/${filename}`, 'utf-8', (err, data) => {
+        if (err) return res.status(500).send('Error reading file');
+    res.render("edit", {filename, data });
+    }
+)});
+
+app.post("/edit/:task", (req, res) => {
+  const filename = req.params.task;
+  fs.writeFile(`./files/${filename}`, req.body.taskinfo , (err) => {
+    if (err) return res.status(500).send("Error reading file");
+    res.redirect("/");
+  });
+});
+
+app.get("/delete/:task", (req, res) => {
+  const filename = req.params.task;
+  fs.unlink(`./files/${filename}`, (err) => {
+    if (err) return res.status(500).send("Error deleting file");
+    res.redirect("/");
+  });
 });
 
 app.use((req, res, next) => {
@@ -48,7 +76,7 @@ app.use((req, res, next) => {
 });
 
 app.use((error, req, res, next) => {
-  res.status(500).send("Internal Server Error");
+  res.send(error);
 });
 
 
