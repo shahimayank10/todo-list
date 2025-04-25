@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>This is a simple HTML page.</p>
+    <nav>
+        <h1>Taskbook</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/create">Create Task</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <% files.forEach((file)=>{%>
+            <div class="list">
+                <h3><%= file %></h3>
+                <a href="/show/:task">show</a>
+                <a href="/edit/:task">edit</a>
+                <a href="/delete/:task">delete</i></a>
+             </div>
+        <% })  %>
+       
+    </div>
 </body>
 </html>

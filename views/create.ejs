@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/create.css">
 </head>
 <body>
-    
+    <nav>
+        <h1>Taskbook</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/create">Create Task</a></li>
+        </ul>
+    </nav>
+
+    <h2>create new task</h2>
+    <form action="/create" method="post">
+    <textarea rows="10" cols="40" name="taskinfo"></textarea>
+    <br>
+    <button >submit</button>
+    </form>
 </body>
 </html>
