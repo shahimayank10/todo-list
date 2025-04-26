@@ -19,6 +19,20 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    font-size: large;
+    height: 70px;
+}
+.container{
+    margin-top: 50px;
+    padding-left: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+p{
+    margin-top: 50px;
+    padding: 10px;
+    font-size: large;
 }
 
 ul{
@@ -34,4 +48,15 @@ li>a{
 span{
     color: #1F6FEB;
     font-weight: 600;
+}
+
+button{
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #1F6FEB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
 }

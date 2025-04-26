@@ -25,6 +25,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    font-size: large;
+    height: 70px;
 }
 
 ul{
@@ -33,14 +35,18 @@ ul{
     gap: 20px;
 }
 .list{
-    padding: 7px;
+    padding: 10px 20px;
     display:inline-block;
-    width: 300px;
+    width: 500px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color:#1F6FEB;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
 }
 li>a{
     text-decoration: none;
